@@ -1,0 +1,26 @@
+li {
+    list-style-type: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    color: blue;
+    width: 20px;
+    height: 20px;
+}
+
+button:hover {
+    color: red;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

@@ -1,0 +1,44 @@
+<body>
+    <header>
+        <h1>To Do List</h1>
+    </header>
+    <section id="input_section">
+        <input [(ngModel)]="task" id="input_task_id">
+        <button (click)="add()"> + </button>
+    </section>
+    <section class="flex" (click)="info($event)">
+        <div class="divisoria">
+            <h2>To Do</h2>
+            <li *ngFor="let item of toDoList">
+                <div class="card">
+                    <div class="inv"></div>
+                    <p>{{item}}</p>
+                    <button (click)="doing()" name="{{item}}">></button>
+                </div>
+            </li>
+            <p>{{toDoLeft}} items left</p>
+        </div>
+        <div class="divisoria">
+            <h2>Doing</h2>
+            <li *ngFor="let item of doingList">
+                <div class="card">
+                    <button (click)="toDo()"><</button>
+                    <p>{{item}}</p>
+                    <button (click)="done()">></button>
+                </div>
+            </li>
+            <p>{{doingLeft}} items left</p>
+        </div>
+        <div class="divisoria">
+            <h2>Done</h2>
+            <li *ngFor="let item of doneList">
+                <div class="card">
+                    <button (click)="doneToDoing()"><</button>
+                    <p>{{item}}</p>
+                    <div class="inv"></div>
+                </div>
+            </li>
+            <p>{{doneLeft}} items left</p>
+        </div>
+    </section>
+</body>
